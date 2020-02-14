@@ -99,7 +99,7 @@ download_file() {
   local download_url="$1"
   local download_path="$2"
 
-  echo "$download_url"
+  echo "Fetching $download_url"
 
   STATUSCODE=$(curl --write-out "%{http_code}" -Lo "$download_path" -C - "$download_url")
 
