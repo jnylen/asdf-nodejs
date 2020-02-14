@@ -115,7 +115,7 @@ get_archive_file_name() {
   local pkg_name
 
   if [ "$install_type" = "version" ]; then
-    pkg_name="node-v${version}-$(uname -s | tr '[:upper:]' '[:lower:]')-$(get_nodejs_machine_hardware_name)"
+    pkg_name="node-v${version}-$(uname -s | tr '[:upper:]' '[:lower:]')-$(get_nodejs_machine_hardware_name)-musl"
   else
     pkg_name="${version}"
   fi
